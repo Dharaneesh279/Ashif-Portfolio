@@ -9,19 +9,19 @@ const Fitness = () =>{
             <p className="fitnessDes">Lights, transitions, and a whole lot of vision</p>
         <div className="Fitnessvideo-container">
             <div className="Fitnessvideo-card">
-                <LazyVideo src="/video/Main7.mp4" poster="/img/Main7-TN.png"/>
+                <LazyVideo src="/video/Main7.mp4" poster="/img/Main7-TN-New.jpeg"/>
                 <h1 className="creatorName">DLOKI</h1>
                 <h1 className="creatorDes">When strength meets storytelling.</h1>
             </div>
 
             <div className="Fitnessvideo-card">
-                <LazyVideo src="/video/Main13.mp4" poster="/img/Main13-TN.png"/>
+                <LazyVideo src="/video/Main13.mp4" poster="/img/Main13-TN-New.jpeg"/>
                 <h1 className="creatorName">GAYATHRI LIFTS</h1>
                 <h1 className="creatorDes">Lights, transitions, and a whole lot of vision</h1>
             </div>
 
             <div className="Fitnessvideo-card">
-                <LazyVideo src="/video/Main2.mp4" poster="/img/Main2-TN.png"/>
+                <LazyVideo src="/video/Main2.mp4" poster="/img/Main2-TN-New.jpeg"/>
                 <h1 className="creatorName">KISTHENICS</h1>
                 <h1 className="creatorDes">Ended with a video that pumps adrenaline</h1>
             </div>

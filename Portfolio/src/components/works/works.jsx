@@ -8,17 +8,17 @@ const videos = [
     1,16,12,8,9,24,25,26,15
   ].map(n => ({
     src: `/video/Main${n}.mp4`,
-    poster: `/img/Main${n}-TN.png`
+    poster: `/img/Main${n}-TN-New.jpeg`
   })),
 
   ...[1,2,3,4,5,6].map(n => ({
     src: `/video/Onam${n}.mp4`,
-    poster: `/img/Onam${n}-TN.png`
+    poster: `/img/Onam${n}-TN-New.jpeg`
   })),
 
   ...[1,2,3,4,5,6,7,8,9,10,11,12,13,14].map(n => ({
     src: `/video/Stories${n}.mp4`,
-    poster: `/img/Str${n}-TN.png`
+    poster: `/img/Str${n}-TN-New.jpeg`
   }))
 ];
 

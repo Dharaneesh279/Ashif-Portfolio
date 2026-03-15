@@ -1,80 +1,80 @@
 @font-face {
-    font-family: 'Monument-Extended';
-    src: url('/fonts/monumentExtended/MonumentExtended-Regular.otf');
+  font-family: 'Monument-Extended';
+  src: url('/fonts/monumentExtended/MonumentExtended-Regular.otf');
 }
 @font-face {
-    font-family: 'Rimouski';
-    src: url('./fonts/rimouski-webfont/rimouski sb.woff');
+  font-family: 'Rimouski';
+  src: url('./fonts/rimouski-webfont/rimouski sb.woff');
 }
 
-@keyframes scroll {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .onam {
-    width: 100%;
-    overflow: hidden;
-    padding: 20px 0;
-    margin-top: 100px;
-    background: url('/img/Onam-series.jpg') no-repeat;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  margin-top: 100px;
+  background: url('/img/Onam-series.jpg') no-repeat;
+}
+
+.onam-slider {
+  overflow: hidden;
+  width: 100%;
 }
 
 .onam-track {
-    display: flex;
-    width: max-content;
-    will-change: transform;
-    animation: scroll 10s linear infinite;
+  display: flex;
+  width: max-content;
+  animation: marquee 10s linear infinite;
+  will-change: transform;
 }
-.onam-track.forward {
-    animation-direction: normal;
-}
+
 .onam-track.reverse {
-    animation-direction: reverse;
-    margin-top:50px;
+  animation-direction: reverse;
+  margin-top: 50px;
 }
+
 .card,
 .cardReverse {
-    width: 30vw;
-    flex-shrink: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    margin-right: 45px;
-    overflow: hidden;
+  width: 30vw;
+  flex-shrink: 0;
+  margin-right: 45px;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card video,
 .cardReverse video {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
 }
-
 .onamTxt {
-    color: #fff;
-    font-family: 'Monument-Extended', sans-serif;
-    font-size: 4rem;
-    text-align: left;
-    line-height: 80px;
-    margin-bottom: 10px;
-    margin-left: 20px;
+  color: #fff;
+  font-family: 'Monument-Extended', sans-serif;
+  font-size: 4rem;
+  line-height: 80px;
+  margin-left: 20px;
 }
 
 .onamDes {
-    color: #fff;
-    font-family: 'Rimouski', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-align: left;
-    max-width: 600px;
-    margin-bottom: 50px;
-    margin-left: 20px;
+  color: #fff;
+  font-family: 'Rimouski', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  max-width: 600px;
+  margin: 0 0 50px 20px;
 }
 
 @media (max-width: 768px) {
@@ -172,3 +172,4 @@
         margin-top: 30px;
     }
 }
+
