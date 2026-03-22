@@ -43,9 +43,9 @@ const RecentWorks = () => {
         </div>
 
         <div className="Recentvideo-card">
-          <LazyVideo src="/video/Main11.mp4" poster="/img/Main11-TN-New.jpeg"/>
-          <h1 className="videoName">Gurupharan</h1>
-          <p className="videoDes">Monochrome frame, timeless emotion.</p>
+          <LazyVideo src="/video/Main20.mp4" poster="/img/Main20-TN-New.jpeg"/>
+          <h1 className="videoName">Swaminathan</h1>
+          <p className="videoDes">New York motion, premium visual grading.</p>
         </div>
       </div>
 

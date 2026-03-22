@@ -4,11 +4,16 @@ import "./works.css";
 
 const videos = [
   ...[
-    11,22,10,6,23,27,17,18,19,3,7,13,2,5,14,4,
-    1,16,12,8,9,24,25,26,15
+    20,21,22,10,6,23,27,17,11,18,19,3,7,13,2,5,14,4,
+    1,16,12,8,9,24,25,26,15,28
   ].map(n => ({
     src: `/video/Main${n}.mp4`,
     poster: `/img/Main${n}-TN-New.jpeg`
+  })),
+
+  ...[1,2,3,4].map(n => ({
+    src: `/video/Wedding${n}.mp4`,
+    poster: `/img/Wedding${n}-TN-New.jpeg`
   })),
 
   ...[1,2,3,4,5,6].map(n => ({

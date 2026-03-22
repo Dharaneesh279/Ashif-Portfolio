@@ -22,21 +22,6 @@ const Watch = () =>{
         </div>
         <div className="Watchvideo-container">
             <div className="Watchvideo-card">
-                <LazyVideo src="/video/Stories1.mp4" poster="/img/Str1-TN-New.jpeg"/>
-            </div>
-            <div className="Watchvideo-card">
-                <LazyVideo src="/video/Stories6.mp4" poster="/img/Str6-TN-New.jpeg"/>
-            </div>
-            <div className="Watchvideo-card">
-                <LazyVideo src="/video/Stories5.mp4" poster="/img/Str5-TN-New.jpeg"/>
-            </div>
-
-            <div className="Watchvideo-card">
-                <LazyVideo src="/video/Stories7.mp4" poster="/img/Str7-TN-New.jpeg"/>
-            </div>
-        </div>
-        <div className="Watchvideo-container">
-            <div className="Watchvideo-card">
                 <LazyVideo src="/video/Stories3.mp4" poster="/img/Str3-TN-New.jpeg"/>
             </div>
             <div className="Watchvideo-card">

@@ -1,0 +1,279 @@
+@font-face {
+  font-family: 'OCR-A-Extended';
+  src: url('/fonts/OCR A Extended/OCR A Extended Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Monument-Extended';
+  src: url('/fonts/monumentExtended/MonumentExtended-Regular.otf');
+}
+
+@keyframes wedding-exitLeft {
+    from { transform: translateX(0);   opacity: 1; }
+    to   { transform: translateX(-4%); opacity: 0; }
+}
+@keyframes wedding-exitRight {
+    from { transform: translateX(0);  opacity: 1; }
+    to   { transform: translateX(4%); opacity: 0; }
+}
+@keyframes wedding-enterFromRight {
+    from { transform: translateX(4%); opacity: 0; }
+    to   { transform: translateX(0);  opacity: 1; }
+}
+@keyframes wedding-enterFromLeft {
+    from { transform: translateX(-4%); opacity: 0; }
+    to   { transform: translateX(0);   opacity: 1; }
+}
+
+.wedding{
+    background-color: rgb(255, 255, 255);
+    height: 240vh;
+    margin-top: 50px;
+}
+.wedding-image{
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wedding-image img {
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.wedding-caption {
+    position: relative;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wedding-title {
+    font-family: 'Monument-Extended', sans-serif;
+    font-size: 2.7rem;
+    color: rgb(203, 143, 201);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.wedding-des {
+    font-family: 'OCR-A-Extended', monospace;
+    font-size: 1.17rem;
+    color: rgb(154, 152, 152);
+    letter-spacing: 0.1em;
+    text-align: left;
+}
+.wedding-carousel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 40px 30px 20px;
+    box-sizing: border-box;
+}
+
+.wedding-video-stage {
+    flex: 1;
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #000;
+}
+
+.wedding-video-track {
+    width: 100%;
+    height: 100%;
+}
+
+.wedding-video-track video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+}
+
+.wedding-video-track.exit-left   { animation: wedding-exitLeft       0.38s cubic-bezier(0.4,0,0.2,1) forwards; }
+.wedding-video-track.exit-right  { animation: wedding-exitRight      0.38s cubic-bezier(0.4,0,0.2,1) forwards; }
+.wedding-video-track.enter-right { animation: wedding-enterFromRight 0.38s cubic-bezier(0.4,0,0.2,1) forwards; }
+.wedding-video-track.enter-left  { animation: wedding-enterFromLeft  0.38s cubic-bezier(0.4,0,0.2,1) forwards; }
+
+.wedding-arrow {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.05);
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.25s, border-color 0.25s, transform 0.2s;
+    z-index: 10;
+}
+
+.wedding-arrow svg {
+    width: 24px;
+    height: 24px;
+}
+
+.wedding-arrow:hover:not(.wedding-arrow--disabled) {
+    background: rgba(0, 0, 0, 0.12);
+    border-color: #000;
+    transform: scale(1.08);
+}
+
+.wedding-arrow--disabled {
+    opacity: 0.2;
+    cursor: default;
+}
+
+.wedding-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.wedding-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.wedding-dot--active {
+    background: #000;
+    transform: scale(1.3);
+}
+@media(max-width:1024px){
+    .wedding{
+        height: 110vh;
+    }
+}
+@media (max-width: 900px) {
+    .wedding{
+        height: 110vh;
+    }
+    .wedding-carousel-wrapper {
+        padding: 100px 20px 15px;
+        gap: 12px;
+    }
+}
+@media (max-width: 768px) {
+    .wedding{
+        height: 120vh;
+    }
+    .wedding-title {
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+    .wedding-des {
+        font-size: 0.85rem;
+    }
+    .wedding-carousel-wrapper {
+        padding: 50px 20px 15px;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 650px) {
+    .wedding-title {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+    .wedding-des {
+        font-size: 0.75rem;
+    }
+    .wedding-carousel-wrapper {
+        padding: 50px 15px 10px;
+        gap: 10px;
+    }
+    .wedding-arrow {
+        width: 38px;
+        height: 38px;
+    }
+    .wedding-arrow svg {
+        width: 18px;
+        height: 18px;
+    }
+    .wedding-video-stage {
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+    .wedding{
+        height: 73vh;
+    }
+    .wedding-title {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+    .wedding-des {
+        font-size: 0.65rem;
+    }
+    .wedding-carousel-wrapper {
+        padding: 15px 10px 10px;
+        gap: 8px;
+    }
+    .wedding-arrow {
+        width: 32px;
+        height: 32px;
+    }
+    .wedding-arrow svg {
+        width: 16px;
+        height: 16px;
+    }
+    .wedding-video-stage {
+        border-radius: 8px;
+    }
+}
+@media (max-width: 450px){
+    .wedding{
+        height: 85vh;
+    }
+    .wedding-caption{
+        padding-top: 30px;
+    }
+    .wedding-carousel-wrapper {
+        padding: 55px 8px 8px;
+        gap: 6px;
+    }
+}
+@media (max-width: 400px) {
+    .wedding{
+        height: 75vh;
+    }
+    .wedding-title {
+        font-size: 1.2rem;
+        margin-bottom: 6px;
+    }
+    .wedding-caption {
+        padding-top: 30px;
+    }
+    .wedding-des {
+        font-size: 0.55rem;
+    }
+    .wedding-carousel-wrapper {
+        padding: 45px 8px 8px;
+        gap: 6px;
+    }
+    .wedding-arrow {
+        width: 28px;
+        height: 28px;
+    }
+    .wedding-arrow svg {
+        width: 14px;
+        height: 14px;
+    }
+    .wedding-video-stage {
+        border-radius: 6px;
+    }
+}

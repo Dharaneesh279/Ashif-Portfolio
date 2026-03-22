@@ -8,6 +8,7 @@ import RecentWorks from "../components/recent/recent";
 import Onam from "../components/onam-series/onam";
 import Fitness from "../components/fitness/fitness";
 import Commercial from "../components/commercial/commercial";
+import Wedding from "../components/wedding/wedding";
 import Tamil from "../components/tamil/tamil";
 import Watch from "../components/watch/watch";
 import Footer from "../components/footer/footer";
@@ -30,6 +31,7 @@ const Home = () => {
       <Carousel />
       <Cursor />
       <RecentWorks />
+      <Wedding/>
       <Onam/>
       <div id="services">
         <Servicez />
